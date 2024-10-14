@@ -17,7 +17,7 @@ title: "iuno"
 
 ## Verwendete Hardware
 * Raspberry Pi pico
-* ![Server](https://22ronny.github.io/server-blog/2024/01/18/Eigenbau-Server.html)
+
 
 
 
