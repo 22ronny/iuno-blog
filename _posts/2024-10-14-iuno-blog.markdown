@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iuno"
+title: "iuno Blog"
 ---
 ![alternativtext](\pbl-blog\image\Banner.jpg)
 ## Einleitung
