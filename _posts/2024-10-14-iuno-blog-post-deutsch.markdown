@@ -4,29 +4,39 @@ title: "iuno German"
 ---
 ![alternativtext](\pbl-blog\image\Banner.jpg)
 ## Einleitung
-Als begeisterter Angler beschloss ich, ein Projekt übers Angeln zu erstellen. In dem Projekt werden alle Fänge aufgezeichnet. Die Fischarten, Köder, Ort, Zeit und Datum.
+`***///Hier Einleitung///***`
 
 ## Verwendete Programme
 * Intellij
+* Thonny
 * Postman
 * Proxmox 8 (Server OS)
 * PostgerSQL
 * pgAdmin
-* Docker + Portainer
 * draw.io (Planung)
-* Visual Studio Code
+* ioBroker
+* Zigbee USB Stick
+* Telegram
+
+## Verwendete Hardware
+* Raspberry Pi 4
+* Raspberry Pi Pico
+* Raspberry Pi Zero
+* Server
+* Temperatursensor
+* Türkontakt
+* Taster
+
 
 
 
 ## Datenbank
 #### PostgreSQL
 Die Datenbank wurden in einem LXC erstellt.  
-Verbindung über VPN (Wireguard)
-* mit Docker und Portainer
 * mit Proxmox (Debian Bookworm - Eigener Server)   
 
 ## Highlights
-Ein Filter mit mehreren Parametern, sollte kein Parameter gewählt werden wird die komplette Liste zurückgegeben.
+`***///Highlights///***`
 
 * **Dynamische Abfragen:**  
  Ermöglicht das Erstellen von Abfragen, die auf variablen Filterkriterien basieren. Dies ist besonders nützlich, wenn Anwendungen flexibel auf Benutzeranfragen reagieren müssen.
@@ -52,47 +62,3 @@ Controller:
     }
 ```
 
-Service Class:
-  
-```java
-    public List<CatchDto> getCatch(Long fishTypeId, LocalDateTime startDate, LocalDateTime endDate, Long speciesId, Long baitId, Long placeId) {
-        return repository.findAll(CatchSpecifications.withFilters(fishTypeId, startDate, endDate, speciesId, baitId, placeId));
-    }
-```
-
-Specification Class:
-
-```java
-    public static Specification<Catch> withFilters(Long fishTypeId, LocalDateTime startDate, LocalDateTime endDate, Long speciesId, Long baitId, Long placeId) {
-        return (root, query, criteriaBuilder) -> {
-            List<Predicate> predicates = new ArrayList<>();
-
-            if (fishTypeId != null) {
-                predicates.add(criteriaBuilder.equal(root.get("species").get("fishType").get("id"), fishTypeId));
-            }
-
-            if (startDate != null) {
-                predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("catchTime"), startDate));
-            }
-
-            if (endDate != null) {
-                predicates.add(criteriaBuilder.lessThanOrEqualTo(root.get("catchTime"), endDate));
-            }
-
-            if (speciesId != null) {
-                predicates.add(criteriaBuilder.equal(root.get("species").get("id"), speciesId));
-            }
-
-            if (baitId != null) {
-                predicates.add(criteriaBuilder.equal(root.get("bait").get("id"), baitId));
-            }
-
-            if (placeId != null) {
-                predicates.add(criteriaBuilder.equal(root.get("place").get("id"), placeId));
-            }
-
-            return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
-        };
-    }
-}
-```
