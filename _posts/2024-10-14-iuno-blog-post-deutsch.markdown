@@ -8,21 +8,24 @@ title: "iuno German"
 
 ## Verwendete Programme
 * Intellij
+* Git
 * Thonny
 * Postman
 * Proxmox 8 (Server OS)
 * PostgerSQL
 * pgAdmin
 * draw.io (Planung)
-* ioBroker
+* ioBroker (für Datenpunkte von Smart Home Gerären)
 * Zigbee USB Stick
 * Telegram
+* Grafana
 
 ## Verwendete Hardware
 * Raspberry Pi 4
 * Raspberry Pi Pico
 * Raspberry Pi Zero
 * Server
+* [Server](https://22ronny.github.io/server-blog/2024/01/18/Eigenbau-Server.html)
 * Temperatursensor
 * Türkontakt
 * Taster
