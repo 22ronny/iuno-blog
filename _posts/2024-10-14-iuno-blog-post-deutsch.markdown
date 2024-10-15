@@ -2,7 +2,8 @@
 layout: post
 title: "iuno German"
 ---
-![alternativtext](\pbl-blog\image\Banner.jpg)
+![alternativtext](\iuno\images\zero.jpg)
+
 ## Einleitung
 `***///Hier Einleitung///***`
 
@@ -15,7 +16,7 @@ title: "iuno German"
 * PostgerSQL
 * pgAdmin
 * draw.io (Planung)
-* ioBroker (für Datenpunkte von Smart Home Gerären)
+* ioBroker (für Datenpunkte von Smart Home Geräten)
 * Zigbee USB Stick
 * Telegram
 * Grafana
@@ -24,19 +25,20 @@ title: "iuno German"
 * Raspberry Pi 4
 * Raspberry Pi Pico
 * Raspberry Pi Zero
-* Server
 * [Server](https://22ronny.github.io/server-blog/2024/01/18/Eigenbau-Server.html)
 * Temperatursensor
 * Türkontakt
 * Taster
 
 
-
-
 ## Datenbank
 #### PostgreSQL
 Die Datenbank wurden in einem LXC erstellt.  
 * mit Proxmox (Debian Bookworm - Eigener Server)   
+
+## Raspberry´s  
+
+
 
 ## Highlights
 `***///Highlights///***`
